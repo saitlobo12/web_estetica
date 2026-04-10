@@ -117,7 +117,7 @@ header {
             rgba(255,255,255,0.2), 
             rgba(255,255,255,0.2)
         ),
-        url('fondo.png');
+       url('fondo.png');
 
     background-size: cover;
     background-position: center right;

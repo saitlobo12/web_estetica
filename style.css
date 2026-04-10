@@ -293,3 +293,18 @@ footer img {
         padding: 40px 20px;
     }
 }
+/* 📱 RESPONSIVE NAV */
+@media (max-width: 768px) {
+    .brand-text {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .main-title {
+        font-size: 16px;
+    }
+
+    .sub-title {
+        font-size: 11px;
+    }
+}

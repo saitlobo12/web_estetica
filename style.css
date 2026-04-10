@@ -224,3 +224,72 @@ footer img {
     background: #c2185b; /* rosa más oscuro */
     transform: scale(1.05);
 }
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* NAV */
+    nav {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .brand-text {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    .sub-title {
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    /* HERO */
+    .hero-content {
+        padding: 25px;
+        width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    /* SERVICIOS */
+    .services {
+        padding: 60px 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* una columna */
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    /* TESTIMONIOS */
+    .testimonials {
+        padding: 40px 20px;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 40px 20px;
+    }
+}

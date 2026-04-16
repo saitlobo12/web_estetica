@@ -15,34 +15,12 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
-    box-sizing: border-box; /* 🔥 CLAVE */
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo img {
-    height: 200px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* LOGO */
-.logo img {
-    height: 100px;
+    height: 70px;
 }
 
 /* TEXTO CENTRO */
@@ -51,40 +29,21 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
-/* TEXTO GRANDE */
+/* TITULOS */
 .main-title {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
-    color: #222;
-    letter-spacing: 1px;
 }
 
-/* NOMBRE */
 .sub-title {
-     font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #222;
-    letter-spacing: 1px;
-}
-
-.brand-text h3 {
-    margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: #222;
-}
-
-.brand-text p {
-    margin: 0;
-    font-size: 13px;
+    font-size: 26px;
+    font-weight: 700;
     color: #e91e63;
-    letter-spacing: 1px;
 }
 
 /* BOTON */
@@ -94,8 +53,6 @@ nav {
     padding: 10px 22px;
     text-decoration: none;
     border-radius: 6px;
-    border: none;
-    font-weight: 500;
     transition: 0.3s;
 }
 
@@ -104,7 +61,7 @@ nav {
     transform: scale(1.05);
 }
 
-/* HERO (FONDO NUEVO PROFESIONAL) */
+/* HERO */
 header {
     height: 100vh;
     display: flex;
@@ -113,64 +70,67 @@ header {
     text-align: center;
 
     background: 
-        linear-gradient(
-            rgba(255,255,255,0.2), 
-            rgba(255,255,255,0.2)
-        ),
-       url('fondo.png');
+        linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+        url('fondo.png');
 
     background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
+    background-position: center;
 }
 
-/* EFECTO VIDRIO PREMIUM */
+/* TARJETA CENTRAL */
 .hero-content {
-    background: rgba(255, 255, 255, 0.9); /* más sólido */
+    background: rgba(255, 255, 255, 0.85);
     padding: 40px;
     border-radius: 20px;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    max-width: 400px;
 }
+
 .hero-logo {
-    height: 90px;
-    margin-bottom: 20px;
+    height: 80px;
+    margin-bottom: 15px;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .hero-content h2 {
     color: #e91e63;
 }
 
+/* BOTONES */
 .btn {
     background: #e91e63;
     color: white;
-    padding: 12px 30px;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 /* SERVICES */
 .services {
-    padding: 100px 60px;
+    padding: 100px 40px;
     text-align: center;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 25px;
 }
 
 .card {
-    background:#F5F5DC;
-    border-radius: 10px;
+    background: white;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 .card img {
@@ -179,21 +139,15 @@ header {
     object-fit: cover;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
 /* TESTIMONIOS */
 .testimonials {
-    padding: 80px;
-    background: #F5F5DC;
-    text-align: center;
+    padding: 80px 20px;
+    background: #f3f3f3;
 }
 
 /* CTA */
 .cta {
-    text-align: center;
-    padding: 80px;
+    padding: 80px 20px;
 }
 
 /* FOOTER */
@@ -205,7 +159,7 @@ footer {
 }
 
 footer img {
-    height: 100px;
+    height: 70px;
 }
 
 /* WHATSAPP */
@@ -220,122 +174,48 @@ footer img {
     text-decoration: none;
 }
 
-.nav-btn:hover {
-    background: #c2185b; /* rosa más oscuro */
-    transform: scale(1.05);
-}
-/* 📱 RESPONSIVE */
+/* 📱 MOBILE */
 @media (max-width: 768px) {
 
-    /* NAV */
     nav {
-        padding: 10px 20px;
-    }
-
-    .logo img {
-        height: 40px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
     }
 
     .brand-text {
         position: static;
         transform: none;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
     .main-title {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .sub-title {
-        font-size: 12px;
+        font-size: 14px;
     }
 
-    .nav-btn {
-        padding: 8px 15px;
-        font-size: 12px;
+    .logo img {
+        height: 50px;
     }
 
-    /* HERO */
     .hero-content {
-        padding: 25px;
         width: 90%;
+        padding: 25px;
     }
 
     .hero-content h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .hero-content h2 {
         font-size: 18px;
     }
 
-    /* SERVICIOS */
-    .services {
-        padding: 60px 20px;
-    }
-
     .grid {
-        grid-template-columns: 1fr; /* una columna */
-    }
-
-    .card img {
-        height: 180px;
-    }
-
-    /* TESTIMONIOS */
-    .testimonials {
-        padding: 40px 20px;
-    }
-
-    /* CTA */
-    .cta {
-        padding: 40px 20px;
-    }
-}
-/* 📱 RESPONSIVE NAV */
-@media (max-width: 768px) {
-    .brand-text {
-        flex-direction: column;
-        gap: 2px;
-    }
-
-    .main-title {
-        font-size: 16px;
-    }
-
-    .sub-title {
-        font-size: 11px;
-    }
-}
-/* 📱 NAVBAR MOBILE FIX */
-@media (max-width: 768px) {
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .brand-text {
-        position: static; /* 🔥 quita el centrado absoluto */
-        transform: none;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .main-title {
-        font-size: 16px;
-    }
-
-    .sub-title {
-        font-size: 12px;
-    }
-
-    .nav-btn {
-        padding: 8px 18px;
-        font-size: 13px;
+        grid-template-columns: 1fr;
     }
 }

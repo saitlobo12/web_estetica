@@ -1,8 +1,24 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* BODY CON FONDO PREMIUM */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #f8f9fb;
     color: #222;
+
+    background: 
+        linear-gradient(
+            rgba(255,255,255,0.65), 
+            rgba(255,255,255,0.65)
+        ),
+        url('fondopag.png');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* NAV */
@@ -11,16 +27,17 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: white;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
 .logo img {
-    height: 70px;
+    height: 65px;
 }
 
 /* TEXTO CENTRO */
@@ -32,7 +49,6 @@ nav {
     gap: 10px;
 }
 
-/* TITULOS */
 .main-title {
     font-family: 'Playfair Display', serif;
     font-size: 26px;
@@ -46,18 +62,18 @@ nav {
     color: #e91e63;
 }
 
-/* BOTON */
+/* BOTON NAV PREMIUM */
 .nav-btn {
-    background: #e91e63;
+    background: linear-gradient(135deg, #e91e63, #ff4d88);
     color: white;
-    padding: 10px 22px;
+    padding: 10px 24px;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(233,30,99,0.3);
     transition: 0.3s;
 }
 
 .nav-btn:hover {
-    background: #c2185b;
     transform: scale(1.05);
 }
 
@@ -68,65 +84,78 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    background: 
-        linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
-        url('fondo.png');
-
-    background-size: cover;
-    background-position: center;
 }
 
-/* TARJETA CENTRAL */
+/* TARJETA HERO PREMIUM */
 .hero-content {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 40px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    max-width: 400px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
 .hero-logo {
     height: 80px;
-    margin-bottom: 15px;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
+    font-size: 42px;
 }
 
 .hero-content h2 {
     color: #e91e63;
 }
 
-/* BOTONES */
+/* BOTONES PREMIUM */
 .btn {
-    background: #e91e63;
+    background: linear-gradient(135deg, #e91e63, #ff4d88);
     color: white;
-    padding: 12px 25px;
+    padding: 14px 35px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(233,30,99,0.3);
+    transition: 0.3s;
 }
 
-/* SERVICES */
-.services {
-    padding: 100px 40px;
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* SECCIONES */
+.services,
+.about,
+.results,
+.testimonials,
+.cta {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 60px 25px;
     text-align: center;
+
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
+/* CARD PREMIUM */
 .card {
-    background: white;
-    border-radius: 12px;
+    background: #fdf6f8;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
     transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .card:hover {
@@ -137,17 +166,6 @@ header {
     width: 100%;
     height: 200px;
     object-fit: cover;
-}
-
-/* TESTIMONIOS */
-.testimonials {
-    padding: 80px 20px;
-    background: #f3f3f3;
-}
-
-/* CTA */
-.cta {
-    padding: 80px 20px;
 }
 
 /* FOOTER */
@@ -172,50 +190,97 @@ footer img {
     border-radius: 50%;
     color: white;
     text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* 📱 MOBILE */
-@media (max-width: 768px) {
+/* PAGINAS SERVICIO */
+.service-hero {
+    margin-top: 100px;
+    padding: 60px 20px;
+    text-align: center;
+}
 
+.service-image img {
+    width: 300px;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+}
+
+.service-info,
+.service-cta {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* TITULOS */
+.service-hero h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* SLIDER PRO */
+.compare {
+    position: relative;
+    width: 320px;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    appearance: none;
+    background: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+    background: #e91e63;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
     nav {
         flex-direction: column;
         gap: 10px;
-        padding: 10px;
     }
 
     .brand-text {
         position: static;
         transform: none;
         flex-direction: column;
-        align-items: center;
     }
 
-    .main-title {
-        font-size: 16px;
-    }
-
+    .main-title,
     .sub-title {
-        font-size: 14px;
-    }
-
-    .logo img {
-        height: 50px;
-    }
-
-    .hero-content {
-        width: 90%;
-        padding: 25px;
-    }
-
-    .hero-content h1 {
-        font-size: 26px;
-    }
-
-    .hero-content h2 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    header {
+        padding-top: 120px;
     }
 }
